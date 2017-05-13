@@ -1,0 +1,32 @@
+{
+  "name": "my.biz",
+  "version": "1.0.0",
+  "description": "Calendar | Client Management | eComm",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonKleiman/my.biz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonKleiman/my.biz/issues"
+  },
+  "homepage": "https://github.com/BrandonKleiman/my.biz#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,20 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const myRouter = require(`${__dirname}/api/router.js`);
-
-const app = express();
+const db = require('./api/db.js');
 const cors = require('cors');
+
+const myRouter = require(`${__dirname}/api/router.js`);
+const app = express();
+
 const port = process.env.PORT || 8000;
 
-//Middleware
+// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('combined'));
 app.use(express.static('./output'));
 app.use('/api', myRouter);
 
-app.use(cors())
+app.use(cors());
 
 app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');

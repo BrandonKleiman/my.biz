@@ -19,7 +19,7 @@ const businessSchema = mongoose.Schema({
     }],
     purchases: [{
       item: String,
-      price: String,
+      price: Number,
       date: Date,
     }],
     clientNotes: String,

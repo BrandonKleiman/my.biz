@@ -3,6 +3,6 @@ import * as types from '../constants/ActionTypes.jsx';
 
 export function someActionHandler() {
   return {
-    type: types.SOME_ACTION;
+    type: types.SOME_ACTION,
   };
 }

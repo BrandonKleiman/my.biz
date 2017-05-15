@@ -1,11 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
-// import Profile from '../pages/Profile';
-// import Login from '../pages/Login';
-// import Analytics from '../pages/Analytics';
-// import RunHistory from '../pages/RunHistory';
-// import Leaderboard from '../pages/Leaderboard';
-// import About from '../pages/About';
+import Landing from '../pages/Landing';
+import Bizmenu from '../pages/Bizmenu';
 import { connect } from 'react-redux';
 // import * as UserActions from '../actions';
 
@@ -22,7 +18,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <p>test</p>
+        <Route exact path="/" component={Landing} />
+        <Route path="/manage" component={Bizmenu} />
       </div>
     );
   }
